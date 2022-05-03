@@ -3,13 +3,48 @@
 // demais itens caso eles possuam a mesma. Previna
 // o comportamento padrão desses links
 
+const linksInternos = document.querySelectorAll('a[href^="#"]');
+
+function handleLink(event) {
+    event.preventDefault()
+    linksInternos.forEach((link) => {
+        link.classList.remove('ativo');
+    });
+    event.currentTarget.classList.add('ativo');
+}
+
+linksInternos.forEach((link) => {
+    link.addEventListener('click', handleLink);
+});
+
 
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
+const todosElementos = document.querySelectorAll('body *');
 
+todosElementos.forEach((elemento) => {
+    elemento.addEventListener('click', function(e) {
+        console.log(e.target);
+    })
+});
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
+const removeElemento = document.querySelectorAll('body');
 
+removeElemento.forEach((elemento) => {
+    elemento.addEventListener('click', function(e) {
+        console.log(e.target.remove());
+    })
+});
 
 // Se o usuário clicar na tecla (t), aumente todo o texto do site. 
+// let pressionaT = document.querySelector('body');
+function handleClickT(event) {
+    console.log(event.key);
+    if(event.key === 't') {
+        document.documentElement.classList.toggle('textomaior');
+    }
+}
+
+window.addEventListener('keydown', handleClickT);
