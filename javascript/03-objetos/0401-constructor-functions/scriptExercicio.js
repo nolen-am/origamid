@@ -7,7 +7,7 @@ const pessoa = {
     }
   }
 
-  function ConstructorPessoa(nome, idade) {
+  function Pessoa(nome, idade) {
     this.nome = nome,
     this.idade = idade,
     this.andar = function() {
@@ -17,17 +17,17 @@ const pessoa = {
   
   // Crie 3 pessoas, João - 20 anos,
   // Maria - 25 anos, Bruno - 15 anos
-  const pessoaUm = new ConstructorPessoa(
+  const pessoaUm = new Pessoa(
       nome = 'João',
       idade = 20,
   );
 
- const pessoaDois = new ConstructorPessoa(
+ const pessoaDois = new Pessoa(
     nome = 'Maria',
     idade = 25,
 );
 
-const pessoaTres = new ConstructorPessoa(
+const pessoaTres = new Pessoa(
     nome = 'Bruno',
     idade = 15,
 );
