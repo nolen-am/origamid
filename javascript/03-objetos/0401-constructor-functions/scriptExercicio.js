@@ -40,5 +40,19 @@ const pessoaTres = new Pessoa(
   // elements, retorna NodeList com os elementos selecionados
   // addClass(classe), adiciona a classe a todos os elementos
   // removeClass(classe), remove a classe a todos os elementos
-  
-  
+
+function Dom(seletor) {
+    this.elements = function() {
+        return document.querySelectorAll(seletor)
+    }
+    this.addClass = function(classe) {
+        this.elements().forEach(element => {
+            element.classList.add(classe);
+        });
+    }
+    this.removeClass = function(classe) {
+        this.elements().forEach((element) => {
+            element.classList.remove(classe);
+        });
+    }
+}
