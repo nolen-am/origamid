@@ -12,7 +12,7 @@ dados[1][2].cor; // azul
 // CONSTRUÇÃO DE ARRAYS
 // Toda array herda os métodos e propriedades do protótipo do construtor Array.
 const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
-const carros = new Array('Corola', 'Mustang', 'Honda');
+const carros = new Array('Corola', 'Mustang', 'Honda'); 
 
 carros[1] // Mustang
 carros[2] = 'Ferrari';

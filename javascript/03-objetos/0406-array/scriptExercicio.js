@@ -28,7 +28,7 @@ const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
 estudantes.sort();
 // console.log(estudantes);
 
-estudantes.reverse();
+estudantes.reverse(); 
 // console.log(estudantes);
 
 // console.log(estudantes.includes('Joana'));
